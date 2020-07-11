@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/art/fonts/minecraftia_size8.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/objects/new_button/new_button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/objects/title_screen/title_screen.gd" type="Script" id=3]
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 296.0
+margin_bottom = 164.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Menu"]
+margin_right = 272.0
+margin_bottom = 11.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.937255, 0.839216, 0.713726, 1 )
+text = "Down Down Dungeon"
+align = 1
+
+[node name="Label2" type="Label" parent="Menu"]
+margin_top = 15.0
+margin_right = 272.0
+margin_bottom = 26.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.937255, 0.839216, 0.713726, 1 )
+text = "for the GMTK2020 Game Jam"
+align = 1
+
+[node name="CenterRow" type="HBoxContainer" parent="Menu"]
+margin_top = 30.0
+margin_right = 272.0
+margin_bottom = 148.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Buttons" type="VBoxContainer" parent="Menu/CenterRow"]
+margin_right = 272.0
+margin_bottom = 118.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+
+[node name="StartGame" parent="Menu/CenterRow/Buttons" instance=ExtResource( 2 )]
+margin_top = 49.0
+margin_bottom = 69.0
+scene_to_load = "res://assets/objects/prototype_world/world.tscn"
+
+[node name="Label" parent="Menu/CenterRow/Buttons/StartGame" index="0"]
+text = "                                     Start Game"
+
+[editable path="Menu/CenterRow/Buttons/StartGame"]

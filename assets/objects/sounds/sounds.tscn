@@ -1,0 +1,38 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/sfx/FF_punch.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/sfx/enemy_death/explodify.wav" type="AudioStream" id=2]
+[ext_resource path="res://assets/sfx/blast.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sfx/enemy_death/explodify4.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/sfx/enemy_death/explodify3.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sfx/collect4.wav" type="AudioStream" id=6]
+[ext_resource path="res://assets/sfx/enemy_death/explodify5.wav" type="AudioStream" id=7]
+[ext_resource path="res://assets/sfx/enemy_death/explodify2.wav" type="AudioStream" id=8]
+
+[node name="Sounds" type="Node"]
+
+[node name="EnemyDeathSounds" type="Node" parent="."]
+
+[node name="EnemyDeath1" type="AudioStreamPlayer" parent="EnemyDeathSounds"]
+stream = ExtResource( 2 )
+
+[node name="EnemyDeath2" type="AudioStreamPlayer" parent="EnemyDeathSounds"]
+stream = ExtResource( 8 )
+
+[node name="EnemyDeath3" type="AudioStreamPlayer" parent="EnemyDeathSounds"]
+stream = ExtResource( 5 )
+
+[node name="EnemyDeath4" type="AudioStreamPlayer" parent="EnemyDeathSounds"]
+stream = ExtResource( 4 )
+
+[node name="EnemyDeath5" type="AudioStreamPlayer" parent="EnemyDeathSounds"]
+stream = ExtResource( 7 )
+
+[node name="OnHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+
+[node name="Blast" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+
+[node name="Collect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
